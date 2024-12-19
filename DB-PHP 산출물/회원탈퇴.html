@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>회원탈퇴</title>
+  <style>
+    body {
+      background-color: whitesmoke;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      width: 500px;
+      padding: 20px;
+      border: 2px solid black;
+      border-radius: 10px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      text-align: center;
+    }
+    input[type="submit"],
+	input[type="button"]{
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      align-self: center;
+    }
+	button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      align-self: center;
+    }
+    button:hover {
+      background-color: #0069d9;
+    }
+  </style>
+</head>
+<body>
+  <form action="회원탈퇴.php" method="POST" enctype="multipart/form-data">
+	<h1>회원 탈퇴</h1>
+      <div class="input-group">
+        <h3>버튼을 누르시면 정말로 회원이 탈퇴됩니다.<h3>
+      </div>
+	  <div class="input-group">
+	  <br>
+        <주의>
+      </div>
+	  <div>
+	  한 번 탈퇴된 계정은 복구되지 않습니다.
+	  </div>
+	  <br><br>
+	  <table>
+		<tr>
+			<td>
+				<input type="submit" value="회원탈퇴">
+			</td>
+			<td>
+				<a href="회원정보수정화면.php"><input type="button" value="탈퇴취소"></a>
+			</td>
+		</tr>
+	</table>
+	</table>
+  </form>
+</body>
+</html>

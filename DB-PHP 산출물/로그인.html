@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <style>
+      body {
+        background-color: whitesmoke;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .login-box {
+        width: 400px;
+        padding: 20px;
+        border: 2px solid black;
+        border-radius: 10px;
+        text-align: center;
+        background-color: white;
+      }
+      .input-group {
+        margin-bottom: 20px;
+        text-align: left;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input {
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 100%;
+      }
+      button[type="submit"] {
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      button[type="submit"]:hover {
+        background-color: #0069d9;
+      }
+      a.main-link {
+        color: red;
+        text-decoration: none;
+      }
+      .forgot-password {
+        margin-top: 10px;
+        font-size: 14px;
+        color: blue;
+      }
+      .register-message {
+        font-size: 14px;
+        margin-top: 20px;
+      }
+      .register-link {
+        color: blue;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-box">
+        <a href="메인화면.html" class="main-link">Back To HB</a>
+        <h2>로그인</h2>
+        <form action="로그인.php" method="POST">
+          <div class="input-group">
+            <label for="id">아이디</label>
+            <input type="text" id="id" name="id" required>
+          </div>
+          <div class="input-group">
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <p class="forgot-password">비밀번호를 잊으셨습니까?</p>
+          <button type="submit">로그인</button>
+        </form>
+        <p class="register-message">회원이 아니십니까?
+          <a href="회원가입.html" class="register-link">회원가입</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+

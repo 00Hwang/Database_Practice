@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>회원정보 수정</title>
+  <style>
+    body {
+      background-color: whitesmoke;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      width: 500px;
+      padding: 20px;
+      border: 2px solid black;
+      border-radius: 10px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      text-align: center;
+    }
+    input[type="submit"],
+	input[type="button"]{
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      align-self: center;
+    }
+	button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      align-self: center;
+    }
+    button:hover {
+      background-color: #0069d9;
+    }
+  </style>
+</head>
+<body>
+  <form action="프사변경.php" method="POST" enctype="multipart/form-data">
+	<h1>프로필 설정</h1>
+      <div class="input-group">
+        <label for="profile">프로필 사진</label>
+        <input type="file" id="profile" name="profile">
+      </div>
+	  <table>
+		<tr>
+			<td>
+				<input type="submit" value="프사변경">
+			</td>
+			<td>
+				<a href="회원정보수정화면.php"><input type="button" value="변경취소"></a>
+			</td>
+		</tr>
+	</table>
+  </form>
+</body>
+</html>

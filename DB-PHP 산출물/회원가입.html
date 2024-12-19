@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>회원가입</title>
+  <style>
+    body {
+      background-color: whitesmoke;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .register {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 400px;
+      padding: 20px;
+      border: 2px solid black;
+      border-radius: 10px;
+      background-color: white;
+    }
+    .input-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: inline-block;
+      width: 150px;
+      text-align: right;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    input {
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    .limit-message {
+      font-size: 12px;
+      color: red;
+      margin-left: 165px;
+      display: none;
+      text-align: left;
+    }
+    button {
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #0069d9;
+    }
+    a.main-link {
+      color: red;
+      text-decoration: none;
+    }
+    hr {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border: 0;
+      border-top: 1px solid #ccc;
+    }
+    h3 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin-left: 5px;
+    }
+    .checkbox-group label {
+      margin-bottom: 0;
+      flex-grow: 1;
+      text-align: left;
+      display: flex;
+      align-items: center;
+    }
+    .checkbox-group input[type="checkbox"] {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="register">
+      <a href="메인화면.html" class="main-link">Back To HB</a>
+      <h2>회원가입</h2>
+      <form action="회원가입.php" method="POST" enctype="multipart/form-data">
+        <div class="input-group">
+          <label for="id">아이디</label>
+          <input type="text" id="id" name="id" required pattern=".{8,15}">
+        </div>
+        <span class="limit-message" id="id-message">8~15글자여야 합니다.</span>
+        <div class="input-group">
+          <label for="password">비밀번호</label>
+          <input type="password" id="password" name="password" required pattern=".{8,15}">
+        </div>
+        <span class="limit-message" id="password-message">8~15글자여야 합니다.</span>
+        <div class="input-group">
+          <label for="name">이름</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="input-group">
+          <label for="phone_number">전화번호</label>
+          <input type="tel" id="phone_number" name="phone_number" required>
+        </div>
+        <div class="input-group">
+          <label for="email">이메일</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="input-group">
+          <label for="email_check">이메일 수신여부</label>
+          <input type="checkbox" id="email_check" name="email_check">
+          <label for="email-receive"></label>
+        </div>
+        <hr>
+        <h3>프로필 설정</h3>
+        <div class="input-group">
+          <label for="profile">프로필 사진</label>
+          <input type="file" id="profile" name="profile">
+        </div>
+        <div class="input-group">
+          <label for="nickname">닉네임</label>
+          <input type="text" id="nickname" name="nickname" required>
+        </div>
+        <button type="submit">회원가입</button>
+      </form>
+    </section>
+  </div>
+  <script>
+    const idInput = document.getElementById('id');
+    const passwordInput = document.getElementById('password');
+    const idMessage = document.getElementById('id-message');
+    const passwordMessage = document.getElementById('password-message');
+    idInput.addEventListener('mouseover', function() {
+      idMessage.style.display = 'block';
+    });
+    passwordInput.addEventListener('mouseover', function() {
+      passwordMessage.style.display = 'block';
+    });
+    idInput.addEventListener('mouseout', function() {
+      idMessage.style.display = 'none';
+    });
+    passwordInput.addEventListener('mouseout', function() {
+      passwordMessage.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
